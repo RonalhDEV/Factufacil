@@ -1,0 +1,29 @@
+@font-face {
+    font-family: Gilroy-Bold;
+    src: url(../assets/fonts/Gilroy-Bold.ttf);
+}
+
+@font-face {
+    font-family: Gilroy-SemiBold;
+    src: url(../assets/fonts/Gilroy-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Gilroy-Medium;
+    src: url(../assets/fonts/Gilroy-Medium.ttf);
+}
+
+@font-face {
+    font-family: Gilroy-Regular;
+    src: url(../assets/fonts/Gilroy-Regular.ttf);
+}
+
+@font-face {
+    font-family: SF-Pro-Display-Bold;
+    src: url(../assets/fonts/SF-Pro-Display-Bold.ttf);
+}
+
+@font-face {
+    font-family: SF-Pro-Display-Semibold;
+    src: url(../assets/fonts/SF-Pro-Display-Semibold.ttf);
+}
