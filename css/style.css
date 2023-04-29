@@ -1,3 +1,5 @@
+/* Imagen de fondo index */
+
 header {
   background-image: url(../assets/img/indexImg.png);
   background-repeat: no-repeat;
@@ -5,6 +7,21 @@ header {
   background-size: cover;
   height: 100vh;
 }
+
+
+.content-container {
+  height: 100%; /* establece la altura de la página */
+  background-image: url(../assets/img/modulosImg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: unset; /* establece la imagen de fondo fija al hacer scroll */
+}
+
+
+
+
+/* Barra de navegacion y logo */
 
 .navBar {
   background-color: #f5eded00;
@@ -51,20 +68,32 @@ header {
   color: #50aaa9;
 }
 
-.module {
+
+
+/* Index modulo residente */
+
+.modulePadre {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row; /* agrega esta propiedad */
+
+}
+
+.moduleRes {
+  flex: 1;
   display: flex;
   align-items: center;
+  margin-top: 250px;
+  margin-left: 200px;
+  margin-right: 70px;
+  margin-bottom: 150px;
   padding: 50px;
-  margin-top: 100px;
-  margin-left: 30px;
-  margin-right: 1100px;
-  margin-bottom: 200px;
   background-color: #f5f5f5;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
 }
 
-.imgModule {
+.imgModuleRes {
   padding: 7%;
   margin-bottom: 0px;
   border-radius: 10px;
@@ -72,36 +101,202 @@ header {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
 }
 
-.imgModule img {
+.imgModuleRes img {
   height: 140px;
 
 }
 
-.module .info {
+.moduleRes .infoModuleRes {
   flex-grow: 1;
   margin-left: 50px;
   margin-bottom: 10px;
 }
 
-.module h1 {
+.moduleRes h1 {
   font-family: Gilroy-Semibold;
   color: #0b2669;
 }
 
-.module h5 {
+.moduleRes h5 {
   display: flex;
   text-align: center;
   font-family: Gilroy-Regular;
 }
 
-.module button {
-padding-left: 70px;
-padding-right: 70px;
-margin-left: 5px;
+.moduleRes button {
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-left: 5px;
 }
 
+/* Index modulo recibo */
 
-
-footer {
-  background-color: rgb(18, 18, 18);
+.moduleRec {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-top: 250px;
+  margin-left: 70px;
+  margin-right: 200px;
+  margin-bottom: 150px;
+  padding: 50px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
 }
+
+.imgModuleRec {
+  padding: 7%;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+.imgModuleRec img {
+  height: 140px;
+
+}
+
+.moduleRec .infoModuleRec {
+  flex-grow: 1;
+  margin-left: 50px;
+  margin-bottom: 10px;
+}
+
+.moduleRec h1 {
+  font-family: Gilroy-Semibold;
+  color: #0b2669;
+}
+
+.moduleRec h5 {
+  display: flex;
+  text-align: center;
+  font-family: Gilroy-Regular;
+}
+
+.moduleRec button {
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-left: 5px;
+}
+
+/* Index modulo contacto */
+
+.moduleCon {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-left: 200px;
+  margin-right: 70px;
+  margin-bottom: 40px;
+  padding: 50px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+.imgModuleCon {
+  padding: 7%;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+.imgModuleCon img {
+  height: 140px;
+
+}
+
+.moduleCon .infoModuleCon {
+  flex-grow: 1;
+  margin-left: 50px;
+  margin-bottom: 10px;
+}
+
+.moduleCon h1 {
+  font-family: Gilroy-Semibold;
+  color: #0b2669;
+}
+
+.moduleCon h5 {
+  display: flex;
+  text-align: center;
+  font-family: Gilroy-Regular;
+}
+
+.moduleCon button {
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-left: 5px;
+}
+
+/* Index modulo nosotros */
+
+.moduleNos {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-left: 80px;
+  margin-right: 200px;
+  margin-bottom: 40px;
+  padding: 50px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+.imgModuleNos {
+  padding: 7%;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+.imgModuleNos img {
+  height: 140px;
+
+}
+
+.moduleNos .infoModuleNos {
+  flex-grow: 1;
+  margin-left: 50px;
+  margin-bottom: 10px;
+}
+
+.moduleNos h1 {
+  font-family: Gilroy-Semibold;
+  color: #0b2669;
+}
+
+.moduleNos h5 {
+  display: flex;
+  text-align: center;
+  font-family: Gilroy-Regular;
+}
+
+.moduleNos button {
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-left: 5px;
+}
+
+/* Footer */
+
+.footerPag {
+  font-size: 1;
+  padding: 20px;
+  background-color: #181818;
+  margin: 0;
+}
+
+.footerPag p {
+  font-size: 1;
+  display: block;
+  text-align: center;
+  color: #ffffff;
+  margin: 0px;
+}
+
