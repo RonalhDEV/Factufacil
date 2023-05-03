@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residentes - Factufácil</title>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="css/styleRecibo.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <nav class="navBar">
+                <div class="navContainer">
+                    <a class="navbarBack" href="../index.html">
+                        <img src="../assets/img/flechaBack.svg" alt="navbarBack">
+                    </a>
+                    <a class="navbarLogo" href="../index.html">
+                        <img src="../assets/img/Factufacil-logo.png" alt="logoFactufacil">
+                    </a>
+                    <ul class="navbarModulos">
+                        <li class="navInicio">
+                            <a class="nav-link" href="#">Residente</a>
+                        </li>
+                        <li class="navResidente">
+                            <a class="nav-link" href="#">Recibos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Soporte</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">¿Quiénes somos?</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container mt-5">
+        <div class="row mb-5"></div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 style="float: left;"><strong>Módulo recibos</strong></h5>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr class="textColumna">
+                                    <th>ID Residente</th>
+                                    <th>Valor</th>
+                                    <th>Periodo de cobro</th>
+                                    <th>Fecha de pago</th>
+                                    <th>Estado</th>
+                                    <th>Número de recibo</th>
+                                    <th class="botonCResidente">
+                                        <button class="btn btn-success" style="float: center;" data-toggle="modal"
+                                            data-target="">Crear recibo</button>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="textInputColumna">
+                                    <td>1</td>
+                                    <td>100.000</td>
+                                    <td>Marzo</td>
+                                    <td>15/04/2023</td>
+                                    <td>Pendiente</td>
+                                    <td>2023040410</td>
+                                    <td>
+                                        <button class="btn btn-sm btn btn-warning text-white"
+                                            wire:click="">Contactar</button>
+                                        <button class="btn btn-sm btn-info text-white" wire:click="">Actualizar</button>
+                                        <button class="btn btn-sm btn-danger text-white" wire:click="">Eliminar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
