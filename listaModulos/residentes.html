@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Residentes - Factufácil</title>
+
     <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../listaModulos/css/styleResidente.css">
     <link rel="stylesheet" href="../css/fonts.css">
-    <link rel="stylesheet" href="css/styleResidente.css">
+
 
 
     <header>
@@ -22,16 +24,16 @@
                     </a>
                     <ul class="navbarModulos">
                         <li class="navInicio">
-                            <a class="nav-link" href="#">Residente</a>
+                            <a class="nav-link" href="loginResidentes.html">Residente</a>
                         </li>
                         <li class="navResidente">
-                            <a class="nav-link" href="#">Recibos</a>
+                            <a class="nav-link" href="loginRecibos.html">Recibos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Soporte</a>
+                            <a class="nav-link" href="contactanos.html">Soporte</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">¿Quiénes somos?</a>
+                            <a class="nav-link" href="nosotros.html">¿Quiénes somos?</a>
                         </li>
                     </ul>
                 </div>
@@ -61,8 +63,9 @@
                                         <th>Apartamento</th>
                                         <th>Torre</th>
                                         <th class="botonCResidente">
-                                            <button class="btn btn-success" style="float: center;" data-toggle="modal"
-                                                data-target="">Crear residente</button>
+                                            <button id="btnCreRes" class="btn btn-success" style="float: center;"
+                                                data-bs-toggle="modal" data-bs-target="#modalCrearRes">Crear
+                                                residente</button>
                                         </th>
                                     </tr>
                                 </thead>
@@ -90,4 +93,40 @@
                 </div>
             </div>
         </div>
+
+
+    <div class="modal fade" id="modalCrearRes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title" id="tittleModal">¡Crea un nuevo residente!</h1>
+            </div>
+            <div class="modal-body">
+            <form>
+                <div id="inputsModal" class="mb-3">
+                    <label for="nombreRes" class="col-form-label">Ingrese el nombre</label>
+                    <input type="text" class="form-control" id="nombreRes" name="nombreRes" required>
+                    <label for="apellidoRes" class="col-form-label">Ingrese el apellido</label>
+                    <input type="text" class="form-control" id="apellidoRes" name="apellidoRes" required>
+                    <label for="documentoRes" class="col-form-label">Ingrese el documento</label>
+                    <input type="number" class="form-control" id="documentoRes" name="documentoRes" required>
+                    <label for="aptoRes" class="col-form-label">Ingrese el apartamento</label>
+                    <input type="number" class="form-control" id="aptoRes" name="aptoRes" required>
+                    <label for="torreRes" class="col-form-label">Ingrese la torre</label>
+                    <input type="number" class="form-control" id="torreRes" name="torreRes" required>
+                </div>
+                
+                <div id="btnFooterModalRes" class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-success">Guardar</button>
+                </div>
+            </form>
+        </div>
+        </div>
+    </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"></script>
 </body>

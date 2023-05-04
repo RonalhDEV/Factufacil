@@ -87,3 +87,32 @@ body {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Modal crear residente */
+
+#inputsModal .form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.116);
+  border-color: #0000003a;
+}
+
+#tittleModal {
+  font-size: 22px;
+  font-weight: bold;
+  font-family: Gilroy-Semibold;
+  margin-left: 7rem;
+}
+#inputsModal label {
+  font-family: Roboto-Regular;
+}
+
+#inputsModal label:not(:first-child) {
+  margin-top: 0.5rem;
+}
+
+#btnFooterModalRes button {
+  font-family: SVN-Gilroy;
+  margin-top: 1rem;
+  margin-right: 4.2rem;
+  padding-left: 30px;
+  padding-right: 30px;
+
+}
