@@ -6,9 +6,6 @@ body {
     height: 100vh;
   }
 
-
-
-
 /* Barra de navegacion y logo */
 
 .navBar {
@@ -35,8 +32,6 @@ body {
     margin-left: 300px;
   }
 
-
-  
   .navbarModulos {
     display: flex;
     justify-content: center;
@@ -87,8 +82,38 @@ body {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
 
+
 /* Modal crear residente */
 
+#modalAllCrear {
+  margin-top: 6rem;
+  
+}
+
+#tittleModalCrear {
+  font-size: 22px;
+  font-weight: bold;
+  font-family: Gilroy-Semibold;
+  margin-left: 6.5rem;
+}
+
+/* Modal actulizar residente */
+
+#modalAllAct {
+  margin-top: 6rem;
+}
+
+/* Modal confirmar eliminacion */
+
+#modalAllDel {
+  margin-top: 11rem;
+}
+
+.modalDelText {
+  text-align: center;
+}
+
+/* Modal general */
 #inputsModal .form-control:focus {
   box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.116);
   border-color: #0000003a;
@@ -98,8 +123,9 @@ body {
   font-size: 22px;
   font-weight: bold;
   font-family: Gilroy-Semibold;
-  margin-left: 7rem;
+  margin-left: 8rem;
 }
+
 #inputsModal label {
   font-family: Roboto-Regular;
 }
@@ -114,5 +140,5 @@ body {
   margin-right: 4.2rem;
   padding-left: 30px;
   padding-right: 30px;
-
 }
+
