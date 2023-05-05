@@ -1,91 +1,119 @@
 body {
-    background-image: url(../../assets/img/modulosAdmFondo.svg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    height: 100vh;
-  }
+  background-image: url(../../assets/img/modulosAdmFondo.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+}
 
 /* Barra de navegacion y logo */
 
 .navBar {
-    background-color: #f5eded00;
-    padding: 10px 0px;
-  }
-  
-  .navContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .navbarBack {
-    position: absolute;
-    display: flex;
-    max-height: 40px;
-    margin-left: 250px;
-    margin-bottom: 8px;
-  }
+  background-color: #f5eded00;
+  padding: 10px 0px;
+}
 
-  .navbarLogo img {
-    max-height: 40px;
-    margin-left: 300px;
-  }
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.navbarBack {
+  position: absolute;
+  display: flex;
+  max-height: 40px;
+  margin-left: 250px;
+  margin-bottom: 8px;
+}
 
-  
-  .navbarModulos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 480px;
-    margin-top: 20px;
-    font-family: Gilroy-Medium;
-  }
-  
-  .navbarModulos li {
-    margin-right: 20px;
-    list-style: none;
-  }
-  
-  .navbarModulos li:last-child {
-    margin-right: 0;
-  }
-  
-  .navbarModulos a {
-    font-size: 15px;
-    text-decoration: none;
-    color: #4164b0;
-    font-weight: bold;
-  }
-  
-  .navbarModulos a:hover {
-    color: #50aaa9;
-  }
+.navbarLogo img {
+  max-height: 40px;
+  margin-left: 300px;
+}
+
+.navbarModulos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 480px;
+  margin-top: 20px;
+  font-family: Gilroy-Medium;
+}
+
+.navbarModulos li {
+  margin-right: 20px;
+  list-style: none;
+}
+
+.navbarModulos li:last-child {
+  margin-right: 0;
+}
+
+.navbarModulos a {
+  font-size: 15px;
+  text-decoration: none;
+  color: #4164b0;
+  font-weight: bold;
+}
+
+.navbarModulos a:hover {
+  color: #50aaa9;
+}
 
 /* Tabla  */
 * body {
-    font-family: Roboto-Regular;
+  font-family: Roboto-Regular;
 }
 
 .textColumna {
-    text-align: center;
+  text-align: center;
 }
 
 .textInputColumna {
-    text-align: center;
+  text-align: center;
 }
 
 .card-header {
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
 .card-body {
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
+
 
 /* Modal crear recibo */
 
+#modalAllCrear {
+  margin-top: 6rem;
+  
+}
+
+#tittleModalCrear {
+  font-size: 22px;
+  font-weight: bold;
+  font-family: Gilroy-Semibold;
+  margin-left: 6.5rem;
+}
+
+/* Modal actulizar residente */
+
+#modalAllAct {
+  margin-top: 6rem;
+}
+
+/* Modal confirmar eliminacion */
+
+#modalAllDel {
+  margin-top: 11rem;
+}
+
+.modalDelText {
+  text-align: center;
+}
+
+/* Modal general */
 #inputsModal .form-control:focus {
   box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.116);
   border-color: #0000003a;
@@ -95,8 +123,9 @@ body {
   font-size: 22px;
   font-weight: bold;
   font-family: Gilroy-Semibold;
-  margin-left: 7rem;
+  margin-left: 8rem;
 }
+
 #inputsModal label {
   font-family: Roboto-Regular;
 }
@@ -105,11 +134,11 @@ body {
   margin-top: 0.5rem;
 }
 
-#btnFooterModalRes button {
+#btnFooterModalRec button {
   font-family: SVN-Gilroy;
   margin-top: 1rem;
   margin-right: 4.2rem;
   padding-left: 30px;
   padding-right: 30px;
-
 }
+

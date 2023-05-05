@@ -5,119 +5,178 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Residentes - Factufácil</title>
+    <title>Recibos - Factufácil</title>
     <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.2.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="css/styleRecibo.css">
 </head>
 
+<header>
+    <div>
+        <nav class="navBar">
+            <div class="navContainer">
+                <a class="navbarBack" href="../index.html">
+                    <img src="../assets/img/flechaBack.svg" alt="navbarBack">
+                </a>
+                <a class="navbarLogo" href="../index.html">
+                    <img src="../assets/img/Factufacil-logo.png" alt="logoFactufacil">
+                </a>
+                <ul class="navbarModulos">
+                    <li class="navInicio">
+                        <a class="nav-link" href="loginResidentes.html">Residente</a>
+                    </li>
+                    <li class="navResidente">
+                        <a class="nav-link" href="loginRecibos.html">Recibos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactanos.html">Soporte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">¿Quiénes somos?</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
 <body>
-    <header>
-        <div>
-            <nav class="navBar">
-                <div class="navContainer">
-                    <a class="navbarBack" href="../index.html">
-                        <img src="../assets/img/flechaBack.svg" alt="navbarBack">
-                    </a>
-                    <a class="navbarLogo" href="../index.html">
-                        <img src="../assets/img/Factufacil-logo.png" alt="logoFactufacil">
-                    </a>
-                    <ul class="navbarModulos">
-                        <li class="navInicio">
-                            <a class="nav-link" href="loginResidentes.html">Residente</a>
-                        </li>
-                        <li class="navResidente">
-                            <a class="nav-link" href="loginRecibos.html">Recibos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contactanos.html">Soporte</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="nosotros.html">¿Quiénes somos?</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <div class="container mt-5">
-        <div class="row mb-5"></div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header">
-                        <h5 style="float: left;"><strong>Módulo recibos</strong></h5>
-                    </div>
-                    <div class="card-body">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr class="textColumna">
-                                    <th>ID Residente</th>
-                                    <th>Valor</th>
-                                    <th>Periodo de cobro</th>
-                                    <th>Fecha de pago</th>
-                                    <th>Estado</th>
-                                    <th>Número de recibo</th>
-                                    <th class="botonCResidente">
-                                        <button id="btnCreRec" class="btn btn-success" style="float: center;"
-                                        data-bs-toggle="modal" data-bs-target="#modalCrearRec">Crear
-                                        recibo</button>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="textInputColumna">
-                                    <td>1</td>
-                                    <td>100.000</td>
-                                    <td>Marzo</td>
-                                    <td>15/04/2023</td>
-                                    <td>Pendiente</td>
-                                    <td>2023040410</td>
-                                    <td>
-                                        <button class="btn btn-sm btn btn-warning text-white"
-                                            wire:click="">Contactar</button>
-                                        <button class="btn btn-sm btn-info text-white" wire:click="">Actualizar</button>
-                                        <button class="btn btn-sm btn-danger text-white" wire:click="">Eliminar</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+    <div>
+        <div class="container mt-5">
+            <div class="row mb-5">
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 style="float: left;"><strong>Módulo recibos</strong></h5>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr class="textColumna">
+                                        <th>ID Residente</th>
+                                        <th>Valor</th>
+                                        <th>Periodo de cobro</th>
+                                        <th>Fecha de pago</th>
+                                        <th>Estado</th>
+                                        <th>Número de recibo</th>
+                                        <th class="botonCRecibo">
+                                            <button id="btnCreRec" class="btn btn-success" data-bs-toggle="modal"
+                                                data-bs-target="#modalCrearRec">Crear
+                                                recibo</button>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="textInputColumna">
+                                        <td>1</td>
+                                        <td>100.000</td>
+                                        <td>Marzo</td>
+                                        <td>15/04/2023</td>
+                                        <td>Pendiente</td>
+                                        <td>2023040410</td>
+                                        <td>
+                                            <a href="contactar.html"><button id="btnContRec"
+                                                    class="btn btn-sm btn btn-warning text-white">Contactar</button></a>
+                                            <button id="btnActRec" class="btn btn-sm btn-info text-white"
+                                                data-bs-toggle="modal" data-bs-target="#modalActRec">Actualizar</button>
+                                            <button id="btnDelRec" class="btn btn-sm btn-danger text-white"
+                                                data-bs-toggle="modal" data-bs-target="#modalDelRec">Eliminar</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="modal fade" id="modalCrearRec" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h1 class="modal-title" id="tittleModal">¡Crea un nuevo recibo!</h1>
+        <div class="modal fade" id="modalCrearRec" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div id="modalAllCrear" class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title" id="tittleModalCrear">¡Crea un nuevo recibo!</h1>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div id="inputsModal" class="mb-3">
+                                <label for="idRes" class="col-form-label">Ingrese el ID</label>
+                                <input type="text" class="form-control" id="idRes" name="idRes" required>
+                                <label for="valorRec" class="col-form-label">Ingrese el valor</label>
+                                <input type="number" class="form-control" id="valorRec" name="valorRec" required>
+                                <label for="periodoRec" class="col-form-label">Ingrese el periodo a cobrar</label>
+                                <input type="text" class="form-control" id="periodoRec" name="periodoRec" required>
+                                <label for="fechaRec" class="col-form-label">Ingrese la fecha límite</label>
+                                <input type="date" class="form-control" id="fechaRec" name="fechaRec" required>
+                                <label for="estadoRec" class="col-form-label">Ingrese el estado del recibo</label>
+                                <input type="number" class="form-control" id="estadoRec" name="estadoRec" required>
+                                <label for="numRec" class="col-form-label">Ingrese el número de recibo</label>
+                                <input type="number" class="form-control" id="numRec" name="numRec" required>
+                            </div>
+                            <div id="btnFooterModalRec" class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="submit" class="btn btn-success">Guardar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="modal-body">
-            <form>
-                <div id="inputsModal" class="mb-3">
-                    <label for="nombreRes" class="col-form-label">Ingrese el nombre</label>
-                    <input type="text" class="form-control" id="nombreRes" name="nombreRes" required>
-                    <label for="apellidoRes" class="col-form-label">Ingrese el apellido</label>
-                    <input type="text" class="form-control" id="apellidoRes" name="apellidoRes" required>
-                    <label for="documentoRes" class="col-form-label">Ingrese el documento</label>
-                    <input type="number" class="form-control" id="documentoRes" name="documentoRes" required>
-                    <label for="aptoRes" class="col-form-label">Ingrese el apartamento</label>
-                    <input type="number" class="form-control" id="aptoRes" name="aptoRes" required>
-                    <label for="torreRes" class="col-form-label">Ingrese la torre</label>
-                    <input type="number" class="form-control" id="torreRes" name="torreRes" required>
-                </div>
-                
-                <div id="btnFooterModalRes" class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="submit" class="btn btn-success">Guardar</button>
-                </div>
-            </form>
         </div>
+        
+        <!-- Modal actualizar -->
+        <div class="modal fade" id="modalActRec" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div id="modalAllAct" class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title" id="tittleModal">¡Actualiza un recibo!</h1>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div id="inputsModal" class="mb-3">
+                                <label for="idRes" class="col-form-label">Ingrese el ID</label>
+                                <input type="text" class="form-control" id="idRes" name="idRes" required>
+                                <label for="valorRec" class="col-form-label">Ingrese el valor</label>
+                                <input type="number" class="form-control" id="valorRec" name="valorRec" required>
+                                <label for="periodoRec" class="col-form-label">Ingrese el periodo a cobrar</label>
+                                <input type="text" class="form-control" id="periodoRec" name="periodoRec" required>
+                                <label for="fechaRec" class="col-form-label">Ingrese la fecha límite</label>
+                                <input type="date" class="form-control" id="fechaRec" name="fechaRec" required>
+                                <label for="estadoRec" class="col-form-label">Ingrese el estado del recibo</label>
+                                <input type="number" class="form-control" id="estadoRec" name="estadoRec" required>
+                                <label for="numRec" class="col-form-label">Ingrese el número de recibo</label>
+                                <input type="number" class="form-control" id="numRec" name="numRec" required>
+                            </div>
+                            <div id="btnFooterModalRec" class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="submit" class="btn btn-success">Guardar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+
+        <!-- Modal confrimar eliminacion -->
+        <div class="modal fade" id="modalDelRec" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div id="modalAllDel" class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title" id="tittleModal">¡Que estás haciendo!</h1>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <p class="modalDelText">¿Estás seguro de que quieres eliminar este recibo?</p>
+                        </div>
+                        <div id="btnFooterModalRec" class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-success">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
