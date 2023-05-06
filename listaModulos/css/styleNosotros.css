@@ -1,0 +1,73 @@
+body {
+    background-image: url(../../assets/img/nosotrosImg.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+  }
+
+/* Barra de navegacion y logo */
+
+  .navBar {
+      background-color: #f5eded00;
+      padding: 19px 0px;
+    }
+    
+  .navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbarBack {
+    position: absolute;
+    display: flex;
+    max-height: 40px;
+    margin-left: 250px;
+    margin-bottom: 8px;
+  }
+
+  .navbarLogo img {
+    max-height: 40px;
+    margin-left: 300px;
+  }
+
+  
+/* Textos nosotros */
+
+  .mainTextNos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+    padding: 0px;
+  }
+
+  .mainTextNos h1 {
+    transform: translate(0,-32px);
+    font-size: 90px;
+    font-family: SF-Pro-Display-Bold;
+    color: #033876;
+    margin: 0px;
+    padding: 0px;
+  }
+
+
+
+  .mainTextNos h2 {
+    transform: translate(42px,12px);
+    font-size: 60px;
+    font-family: Gilroy-Regular;
+    font-weight: lighter;
+    color: #14161ad9;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .parrafosNos p {
+    font-family: Gilroy-Regular;
+    text-align: center;
+    font-size: 25px;
+    line-height: 1;
+  }

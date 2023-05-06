@@ -1,7 +1,7 @@
 /* Imagen de fondo index */
 
 header {
-  background-image: url(../assets/img/indexImg.png);
+  background-image: url(../assets/img/indexImg.svg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -12,15 +12,12 @@ header {
 .content-container {
   height: 100%; /* establece la altura de la página */
   display: block;
-  background-image: url(../assets/img/modulosImg.png);
+  background-image: url(../assets/img/modulosImg.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: unset; /* establece la imagen de fondo fija al hacer scroll */
 }
-
-
-
 
 /* Barra de navegacion y logo */
 
@@ -68,6 +65,65 @@ header {
 .navbarModulos a:hover {
   color: #50aaa9;
 }
+
+.contMainTxt {
+  position: relative;
+  transform: translate(-21.5rem, 9.4rem);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainTittleIndex {
+  color: #033876;
+  font-size: 80px;
+  font-family: SF-Pro-Display-Bold;
+  line-height: 0.9;
+}
+
+.parrafoIndex {
+  margin-top: -10px;
+  font-size: 21px;
+  position: relative;
+  color: #033876;
+  font-family: Gilroy-Regular;
+  line-height: 0.9;
+}
+
+.contModuleTxt {
+  text-align: center;
+  transform: translate(42rem, 7.5rem);
+  position: absolute;
+  flex-direction: column;
+}
+
+.moduleTittle {
+  color: #033876;
+  font-size: 61px;
+}
+
+.parrafoModule{
+  margin-top: -10px;
+  font-size: 21px;
+  position: relative;
+  color: #033876;
+  font-family: Gilroy-Regular;
+  line-height: 0.9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Index modulo residente */
