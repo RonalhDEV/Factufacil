@@ -1,0 +1,304 @@
+body {
+    background-image: url(../../assets/img/contactanosImg.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+  }
+
+/* Barra de navegacion y logo */
+
+  .navBar {
+      background-color: #f5eded00;
+      padding: 19px 0px;
+    }
+    
+  .navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbarBack {
+    position: absolute;
+    display: flex;
+    max-height: 40px;
+    margin-left: 250px;
+    margin-bottom: 8px;
+  }
+
+  .navbarLogo img {
+    max-height: 40px;
+    margin-left: 300px;
+  }
+
+  .navbarModulos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 480px;
+    margin-top: 20px;
+    font-family: Gilroy-Medium;
+  }
+  
+  .navbarModulos li {
+    margin-right: 20px;
+    list-style: none;
+  }
+  
+  .navbarModulos li:last-child {
+    margin-right: 0;
+  }
+  
+  .navbarModulos a {
+    font-size: 15px;
+    text-decoration: none;
+    color: #4164b0;
+    font-weight: bold;
+  }
+  
+  .navbarModulos a:hover {
+    color: #50aaa9;
+  }
+
+
+
+
+/* Titulos contactanos */
+
+  .contTittleCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+    padding: 0px;
+    margin-right: 10rem;
+  }
+
+  .contTittleCont h1 {
+    font-size: 90px;
+    font-family: SF-Pro-Display-Bold;
+    color: #0b2669;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .contTittleCont h5 {
+    transform: translate(0,-20px);
+    font-size: 22px;
+    font-family: SF-Pro-Display-Semibold;
+    margin: 0px;
+    padding: 0px;
+    color: #183242;
+  }
+
+  .contTittleCont h2 {
+    transform: translate(0,-30px);
+    font-size: 60px;
+    font-family: Gilroy-Regular;
+    color: #14161a;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  
+
+
+  /* Index modulo residente */
+
+  .boxCont {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    height: 480px;
+    align-items: center;
+    transform: translate(610px, -20px);
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  }
+  
+  .boxCont h5 {
+    display: flex;
+    text-align: left;
+    font-family: Gilroy-Regular;
+  }
+  
+  .boxCont #boxButton {
+    background: radial-gradient( 80% 100% at 90% 90%, #466BAB 50%, #56A9AD 100% );
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-family: Gilroy-Semibold;
+  }
+  
+  .boxCont #boxButton:hover {
+    background: radial-gradient( 80% 100% at 90% 90%, #4eea8a 50%, #466BAB 100% );
+  }
+  
+  .boxCont #boxButton:active {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+/* Texto caja contacto */
+
+
+.boxCont h1 {
+  color: #002f55;
+  font-size: 25px;
+  margin-top: 25px;
+}
+
+.boxCont h5 {
+  color: #7F7E81;
+  font-size: 15px;
+  margin-top: -10px;
+}
+
+.formCont {
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto-Regular;
+
+  margin-top: 10px;
+  display: flex;
+}
+
+
+
+label.nombreCont {
+  margin-right: 170px;
+  margin-bottom: 5px;
+  color: #777777;
+}
+
+input.nombreCont {
+  width: 400px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #f3f3f3;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 10px;
+  border: none;
+}
+
+label.emailCont {
+  margin-right: 170px;
+  margin-bottom: 5px;
+  color: #777777;
+}
+
+input.emailCont {
+  width: 400px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #f3f3f3;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 10px;
+  border: none;
+}
+
+label.msgCont {
+  margin-right: 170px;
+  margin-bottom: 5px;
+  color: #777777;
+}
+
+textarea.msgCont {
+  resize: none;
+  width: 400px;
+  height: 100px;
+  border-radius: 8px;
+  background-color: #f3f3f3;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  border: none;
+}
+
+.formCont input {
+  color: #0e0e0eb5;
+  font-family: Roboto-Regular;
+  padding: 5px;
+}
+
+.formCont textarea {
+  color: #0e0e0eb5;
+  font-family: Roboto-Regular;
+  padding: 5px;
+}
+
+input:focus {
+  outline-color: #18181863;
+}
+
+input:focus {
+  caret-color: #00000063;
+}
+
+textarea:focus {
+  outline-color: #18181863;
+}
+
+textarea:focus {
+  caret-color: #00000063;
+}
+
+input:focus {
+  text-indent: 5px;
+}
+
+textarea:focus {
+  text-indent: 5px;
+}
+
+
+/* Modal confirmar eliminacion */
+
+#modalAllDel {
+  margin-top: 20rem;
+  margin-right: 49rem;
+}
+
+.modalDelText {
+  font-size: 25px;
+  text-align: center;
+  font-family: Roboto-Regular;
+}
+
+/* Modal general */
+#inputsModal .form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.116);
+  border-color: #0000003a;
+}
+
+#tittleModal {
+  font-size: 22px;
+  font-weight: bold;
+  font-family: Gilroy-Semibold;
+  margin-left: 7rem;
+}
+
+#inputsModal label {
+  font-family: Roboto-Regular;
+}
+
+#inputsModal label:not(:first-child) {
+  margin-top: 0.5rem;
+}
+
+#btnFooterModalRes button {
+  font-family: SVN-Gilroy;
+  margin-top: 1rem;
+  margin-right: 9rem;
+  padding-left: 30px;
+  padding-right: 30px;
+}

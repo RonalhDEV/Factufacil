@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Residentes Sing in - Factufácil</title>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="css/styleContactanos.css">
+</head>
+
+<header>
+    <div>
+        <nav class="navBar">
+            <div class="navContainer">
+                <a class="navbarBack" href="../index.html">
+                    <img src="../assets/img/flechaBack.svg" alt="navbarBack"></a>
+                <a class="navbarLogo" href="../index.html">
+                    <img src="../assets/img/Factufacil-logo.png" alt="logoFactufacil"></a>
+
+            </div>
+        </nav>
+    </div>
+</header>
+
+<body>
+    <div class="contTittleCont">
+        <h1>Contactanos</h1>
+        <h5>Puedes ponerte en contacto con nosotros por medio<br>de el numero telefónico, o bien llenado el
+            formulario</h5>
+        <h2>300 000 0000</h2>
+    </div>
+    <div class="boxCont">
+        <h1>Te responderemos en breve</h1>
+        <h5>Cuéntanoslo todo y pronto nos estaremos comunicando contigo</h5>
+        <div>
+            <form class="formCont">
+                <label class="nombreCont" for="name">Nombre</label>
+                <input class="nombreCont" type="text" id="name" name="name">
+                <label class="emailCont" for="email">Correo electrónico</label>
+                <input class="emailCont" type="email" id="email" name="email">
+                <label class="msgCont" for="message">Adelante, te estamos leyendo</label>
+                <textarea class="msgCont" id="message" name="message" rows="4"></textarea>
+                <button id="boxButton" class="btn btn-sm btn-danger text-white" type="button" data-bs-toggle="modal"
+                    data-bs-target="#modalMsg">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <!-- Modal confrimar eliminacion -->
+        <div class="modal fade" id="modalMsg" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div id="modalAllDel" class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title" id="tittleModal">¡Gracias por tu tiempo!</h1>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <p class="modalDelText">Tu mensaje nos ha llegado.<br>Prónto te contactaremos.</p>
+                        </div>
+                        <div id="btnFooterModalRes" class="modal-footer">
+                            <a href="../index.html"><button type="submit" class="btn btn-success" data-bs-dismiss="modal">De acuerdo</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
