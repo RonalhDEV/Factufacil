@@ -8,7 +8,7 @@ const cuerpoCrearRes = document.getElementById("cuerpoCrearRes")
 let opcionRes = ""
 
 // Obtener todos los residentes
-const urlListadoResidentes = url + "/todos"
+const urlListadoResidentes = `${url}/todos`
 fetch(urlListadoResidentes)
     .then(response => response.json())
     .then(data => mostrarResidentes(data))
@@ -153,17 +153,11 @@ cuerpoCrearRes.addEventListener("submit", (e) => {
 on(document, "click", "#btnDelRes", e => {
     const fila = e.target.parentNode.parentNode;
     const idResidente = fila.firstElementChild.innerHTML;
-
-    // Mostrar el modal de confirmación de eliminación
     const confirmModal = new bootstrap.Modal(document.getElementById('modalDelRes'));
     confirmModal.show();
-
-    // Obtener el botón de confirmar eliminación del modal
     const btnConfirmDelete = document.getElementById('ConfirmDel');
 
-    // Agregar evento de clic al botón de confirmar eliminación
     btnConfirmDelete.addEventListener('click', () => {
-        // Realizar la acción de eliminación
         eliminarResidente(idResidente);
         confirmModal.hide();
     });

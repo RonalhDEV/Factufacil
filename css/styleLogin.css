@@ -93,7 +93,7 @@ label.textPassword {
   color: #7F7E81;
 }
 
-input.boxEmail {
+input#boxEmail {
   width: 400px;
   height: 40px;
   text-indent: 10px;
@@ -105,7 +105,7 @@ input.boxEmail {
   border: none;
 }
 
-input.boxPassword {
+input#boxPassword {
   width: 400px;
   height: 40px;
   text-indent: 10px;
@@ -117,23 +117,23 @@ input.boxPassword {
   border: none
 }
 
-.boxEmail:focus {
+#boxEmail:focus {
   outline-color: #18181863;
 }
 
-.boxEmail:focus {
+#boxEmail:focus {
   caret-color: #00000063;
 }
 
-.boxPassword:focus {
+#boxPassword:focus {
   outline-color: #18181863;
 }
 
-.boxPassword:focus {
+#boxPassword:focus {
   caret-color: #00000063;
 }
 
-.srcSing {
+.singButton {
   transform: translate(60px, 50px);
 }
 

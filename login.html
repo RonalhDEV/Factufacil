@@ -15,23 +15,23 @@
       <nav class="navBar">
         <div class="navContainer">
           <a class="navbarLogo" href="login.html">
-            <img src="../assets/img/Factufacil-logo.png" alt="logoFactufacil"></a>
+            <img src="assets/img/Factufacil-logo.png" alt="logoFactufacil"></a>
         </div>
       </nav>
     </div>
-
   </header>
 
 <body>
   <div class="contentForm">
-    <form>
+    <form id="loginForm">
       <label class="textEmail" for="email">Ingrese su correo electrónico</label>
-      <input type="email" class="boxEmail" name="email" required>
-
+      <input type="email" id="boxEmail" name="boxEmail" required>
+    
       <label class="textPassword" for="password">Ingrese su contraseña</label>
-      <input type="password" class="boxPassword" name="password" required>
-      <a class="srcSing" href="index.html"><button type="button" class="singButton">Ingresar</button></a>
+      <input type="password" id="boxPassword" name="boxPassword" required>
+      <button type="submit" class="singButton">Ingresar</button>
     </form>
   </div>
 </body>
-</html>
+
+<script src="js/login.js"></script>
