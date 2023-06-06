@@ -73,7 +73,6 @@ const cargarIdCombo = (arregloId) => {
     arregloId.forEach(idElement => {
         resultadosId += `<option value="${idElement.idResidente}">ID: ${idElement.idResidente} - ${idElement.nombreResidente} ${idElement.apellidoResidente}</option>`
     });
-
     cargarIdCuerpo.innerHTML = resultadosId
 }
 

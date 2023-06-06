@@ -60,22 +60,16 @@
                                         <th>Correo electrónico</th>
                                         <th>Teléfono</th>
                                         <th class="botonCContacto">
-                                            <button id="btnCreCont" class="btn btn-success" data-bs-toggle="modal"
-                                                data-bs-target="#modalCrearCont">Crear contacto</button>
+                                            <button id="btnCreCont" class="btn btn-success">Crear contacto</button>
                                         </th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="tablaContactar">
                                     <tr class="textInputColumna">
-                                        <td>1</td>
-                                        <td>nataliamarin@gmail.com</td>
-                                        <td>3225231244</td>
-                                        <td>
-                                            <button id="btnActCont" class="btn btn-sm btn-info text-white"
-                                                data-bs-toggle="modal" data-bs-target="#modalActCont">Actualizar</button>
-                                            <button id="btnDelCont" class="btn btn-sm btn-danger text-white"
-                                                data-bs-toggle="modal" data-bs-target="#modalDelCont">Eliminar</button>
-                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -94,10 +88,10 @@
                         <h1 class="modal-title" id="tittleModalCrear">¡Crea un nuevo contacto!</h1>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form id="cuerpoCrearCont">
                             <div id="inputsModal" class="mb-3">
-                                <label for="idResCont" class="col-form-label">Ingrese el ID</label>
-                                <input type="text" class="form-control" id="idResCont" name="idResCont" required>
+                                <label for="idRes" class="col-form-label">Selecciona ID</label>
+                                <select name="idRes" id="idRes" class="form-control" inputmode="numeric"></select>
                                 <label for="emailCont" class="col-form-label">Ingrese el correo electrónico</label>
                                 <input type="text" class="form-control" id="emailCont" name="emailCont" required>
                                 <label for="telCont" class="col-form-label">Ingrese el teléfono</label>
@@ -164,4 +158,5 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"></script>
+    <script src="js/contactar.js"></script>
 </body>
