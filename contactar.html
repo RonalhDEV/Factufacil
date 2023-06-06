@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Residentes - Factufácil</title>
-
+    <title>Contactar - Factufácil</title>
     <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.2.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="/css/styleContactar.css">
-
 </head>
-
 <header>
     <div>
         <nav class="navBar">
@@ -40,7 +36,6 @@
         </nav>
     </div>
 </header>
-
 <body>
     <div>
         <div class="container mt-5">
@@ -56,9 +51,10 @@
                             <table class="table table-bordered">
                                 <thead>
                                     <tr class="textColumna">
-                                        <th>ID</th>
+                                        <th>ID - Residente</th>
                                         <th>Correo electrónico</th>
                                         <th>Teléfono</th>
+                                        <th>ID Contacto</th>
                                         <th class="botonCContacto">
                                             <button id="btnCreCont" class="btn btn-success">Crear contacto</button>
                                         </th>
@@ -66,6 +62,7 @@
                                 </thead>
                                 <tbody id="tablaContactar">
                                     <tr class="textInputColumna">
+                                        <td></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -78,7 +75,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Modal crar residente -->
         <div class="modal fade" id="modalCrearCont" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
@@ -90,7 +86,7 @@
                     <div class="modal-body">
                         <form id="cuerpoCrearCont">
                             <div id="inputsModal" class="mb-3">
-                                <label for="idRes" class="col-form-label">Selecciona ID</label>
+                                <label for="idResL" class="col-form-label">Selecciona ID</label>
                                 <select name="idRes" id="idRes" class="form-control" inputmode="numeric"></select>
                                 <label for="emailCont" class="col-form-label">Ingrese el correo electrónico</label>
                                 <input type="text" class="form-control" id="emailCont" name="emailCont" required>
@@ -106,7 +102,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Modal actualizar -->
         <div class="modal fade" id="modalActCont" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div id="modalAllAct" class="modal-dialog">
@@ -115,14 +110,14 @@
                         <h1 class="modal-title" id="tittleModal">¡Actualiza un contacto!</h1>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form id="cuerpoActCont">
                             <div id="inputsModal" class="mb-3">
-                                <label for="idResCont" class="col-form-label">Ingrese el ID</label>
-                                <input type="text" class="form-control" id="idResCont" name="idResCont" required>
-                                <label for="emailCont" class="col-form-label">Ingrese el correo electrónico</label>
-                                <input type="text" class="form-control" id="emailCont" name="emailCont" required>
-                                <label for="telCont" class="col-form-label">Ingrese el teléfono</label>
-                                <input type="number" class="form-control" id="telCont" name="telCont" required>
+                                <label for="idResActL" class="col-form-label">Selecciona ID</label>
+                                <select name="idResAct" id="idResAct" class="form-control" inputmode="numeric"></select>
+                                <label for="emailContAct" class="col-form-label">Ingrese el correo electrónico</label>
+                                <input type="text" class="form-control" id="emailContAct" name="emailContAct" required>
+                                <label for="telContAct" class="col-form-label">Ingrese el teléfono</label>
+                                <input type="number" class="form-control" id="telContAct" name="telContAct" required>
                             </div>
                             <div id="btnFooterModalCont" class="modal-footer">
                                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
@@ -133,7 +128,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Modal confrimar eliminacion -->
         <div class="modal fade" id="modalDelCont" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div id="modalAllDel" class="modal-dialog">
@@ -146,15 +140,16 @@
                             <p class="modalDelText">¿Estás seguro de que quieres eliminar este contacto?</p>
                         </div>
                         <div id="btnFooterModalCont" class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                            <button type="submit" class="btn btn-success">Guardar</button>
+                            <button id="ConfirmDelClose" type="button" class="btn btn-danger"
+                                data-bs-dismiss="modal">Cancelar</button>
+                            <button id="ConfirmDel" type="submit" class="btn btn-success">Eliminar</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
+    <!-- Llamando JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"></script>

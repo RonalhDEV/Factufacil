@@ -1,20 +1,26 @@
-// Conectar base de datos
+// URL de la API
 const url = "http://localhost:8080/api/residentes"
+
+// Elementos del DOM
 const cuerpoTabla = document.getElementById("tablaResidente");
 let resultadosRes = ""
 
+// Modales
 const modalCrearRes = new bootstrap.Modal(document.getElementById("modalCrearRes"))
 const cuerpoCrearRes = document.getElementById("cuerpoCrearRes")
 let opcionRes = ""
 
-// Obtener todos los residentes
+const confirmModal = new bootstrap.Modal(document.getElementById('modalDelRes'))
+const btnConfirmDelete = document.getElementById('ConfirmDel')
+
+// MOSTRAR: Obtener todos los residentes
 const urlListadoResidentes = `${url}/todos`
 fetch(urlListadoResidentes)
     .then(response => response.json())
     .then(data => mostrarResidentes(data))
     .catch(error => console.log(error))
 
-// Mostrar todos los residentes
+// Función para mostrar los residentes en la tabla
 const mostrarResidentes = (arregloResidetes) => {
     arregloResidetes.forEach(residente => {
         resultadosRes += `<tr>
@@ -35,8 +41,8 @@ const mostrarResidentes = (arregloResidetes) => {
     cuerpoTabla.innerHTML = resultadosRes;
 };
 
-//Escuchador de eventos
-const on = (element, event, selector, handler) => {
+// Función para agregar un escuchador de eventos
+const onResidente = (element, event, selector, handler) => {
     element.addEventListener(event, e => {
         if (e.target.closest(selector)) {
             handler(e)
@@ -44,14 +50,14 @@ const on = (element, event, selector, handler) => {
     })
 }
 
-// Recibir datos de la interfaz
+// CREAR: Elementos del formulario de creación
 const inputNombreRes = document.getElementById("nombreRes")
 const inputApellidoRes = document.getElementById("apellidoRes")
 const inputDocumentoRes = document.getElementById("documentoRes")
 const inputAptoRes = document.getElementById("aptoRes")
 const inputTorreRes = document.getElementById("torreRes")
 
-// Muestra modal crear residente
+// Abrir el modal de creación de residentes
 btnCreRes.addEventListener("click", () => {
     inputNombreRes.value = ""
     inputApellidoRes.value = ""
@@ -60,14 +66,13 @@ btnCreRes.addEventListener("click", () => {
     inputTorreRes.value = ""
     modalCrearRes.show()
     opcionRes = "crearRes"
-
     const tituloModalCrear = document.getElementById("tittleModalCrear");
     tituloModalCrear.textContent = "¡Crea un nuevo residente!";
 })
 
-// Prepara proceso editar
+// Escuchador de eventos para el botón de actualizar
 let idActRes
-on(document, "click", "#btnActRes", e => {
+onResidente(document, "click", "#btnActRes", e => {
     const fila = e.target.parentNode.parentNode
     idActRes = fila.firstElementChild.innerHTML
 
@@ -79,16 +84,15 @@ on(document, "click", "#btnActRes", e => {
         .catch(error => console.log(error))
 })
 
+// Mostrar datos de residentes en el modal de actualización
 const mostrarRes = (data) => {
     inputNombreRes.value = data.nombreResidente
     inputApellidoRes.value = data.apellidoResidente
     inputDocumentoRes.value = data.documentoResidente
     inputAptoRes.value = data.aptoResidente
     inputTorreRes.value = data.torreResidente
-
     opcionRes = "editarRes"
     modalCrearRes.show()
-
     const tituloModalCrear = document.getElementById("tittleModalCrear");
     if (opcionRes === "editarRes") {
         tituloModalCrear.textContent = "¡Actualiza un residente!";
@@ -97,8 +101,7 @@ const mostrarRes = (data) => {
     }
 }
 
-
-// Crear residente o editar residente
+// Funcion para crear residente o editar residente
 cuerpoCrearRes.addEventListener("submit", (e) => {
     e.preventDefault()
 
@@ -149,13 +152,11 @@ cuerpoCrearRes.addEventListener("submit", (e) => {
     modalCrearRes.hide()
 })
 
-// Eliminar residentes
-on(document, "click", "#btnDelRes", e => {
+//ELIMINAR: Escuchador de eventos se obtiene ID Residente
+onResidente(document, "click", "#btnDelRes", e => {
     const fila = e.target.parentNode.parentNode;
     const idResidente = fila.firstElementChild.innerHTML;
-    const confirmModal = new bootstrap.Modal(document.getElementById('modalDelRes'));
     confirmModal.show();
-    const btnConfirmDelete = document.getElementById('ConfirmDel');
 
     btnConfirmDelete.addEventListener('click', () => {
         eliminarResidente(idResidente);
@@ -163,7 +164,7 @@ on(document, "click", "#btnDelRes", e => {
     });
 });
 
-// Función para eliminar el residente
+// Función para eliminar contacto
 const eliminarResidente = (idResidente) => {
     const urlBorrar = `${url}/borrar/${idResidente}`;
     fetch(urlBorrar, {
@@ -173,5 +174,3 @@ const eliminarResidente = (idResidente) => {
         .then(() => location.reload())
         .catch(error => console.log(error));
 };
-
-

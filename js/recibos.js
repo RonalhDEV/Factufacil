@@ -1,8 +1,11 @@
-// Conectar base de datos
+// URL de la API
 const url = "http://localhost:8080/api/recibos"
+
+// Elementos del DOM
 const cuerpoTabla = document.getElementById("tablaRecibo");
 let resultadosRec = ""
 
+// Modales
 const modalCrearRec = new bootstrap.Modal(document.getElementById("modalCrearRec"))
 const cuerpoCrearRec = document.getElementById("cuerpoCrearRec")
 let opcionRec = ""
@@ -10,14 +13,17 @@ let opcionRec = ""
 const modalActRec = new bootstrap.Modal(document.getElementById("modalActRec"))
 const cuerpoActRec = document.getElementById("cuerpoActRec")
 
-// Obtener todos los recibos
+const confirmModal = new bootstrap.Modal(document.getElementById('modalDelRec'));
+const btnConfirmDelete = document.getElementById('ConfirmDel');
+
+// MOSTRAR: Obtener todos los contactos
 const urlListadoRecibos = `${url}/todos`
 fetch(urlListadoRecibos)
     .then(response => response.json())
     .then(data => mostrarRecibos(data))
     .catch(error => console.log(error))
 
-// Mostrar todos los recibos
+// Función para mostrar los contactos en la tabla
 const mostrarRecibos = (arregloRecibos) => {
     arregloRecibos.forEach(recibo => {
         resultadosRec += `<tr>
@@ -38,8 +44,8 @@ const mostrarRecibos = (arregloRecibos) => {
     cuerpoTabla.innerHTML = resultadosRec;
 };
 
-//Escuchador de eventos
-const on = (element, event, selector, handler) => {
+// Función para agregar un escuchador de eventos
+const onRecibos = (element, event, selector, handler) => {
     element.addEventListener(event, e => {
         if (e.target.closest(selector)) {
             handler(e)
@@ -47,9 +53,7 @@ const on = (element, event, selector, handler) => {
     })
 }
 
-// CREAR
-
-// Recibir datos de la interfaz
+// CREAR: Elementos del formulario de creación
 const selectIdRes = document.getElementById("idRes")
 const inputValorRec = document.getElementById("valorRec")
 const inputPeriodoRec = document.getElementById("periodoRec")
@@ -57,7 +61,7 @@ const inputFechaRec = document.getElementById("fechaRec")
 const inputEstadoRec = document.getElementById("estadoRec")
 
 
-// Carga idResidente en modal crear
+// Cargar opciones del combo de residentes en el modal de creación
 const comboRecibo = () => {
     const urlListadoRecibos = "http://localhost:8080/api/residentes/todos"
     fetch(urlListadoRecibos)
@@ -66,7 +70,6 @@ const comboRecibo = () => {
         .catch(error => console.log(error))
 
 }
-
 const cargarIdCombo = (arregloId) => {
     const cargarIdCuerpo = document.getElementById("idRes")
     let resultadosId = ""
@@ -76,7 +79,7 @@ const cargarIdCombo = (arregloId) => {
     cargarIdCuerpo.innerHTML = resultadosId
 }
 
-// Muestra modal crear recibo
+// Abrir el modal de creación de recibos
 btnCreRec.addEventListener("click", () => {
     selectIdRes.value = ""
     inputValorRec.value = ""
@@ -115,23 +118,21 @@ cuerpoCrearRec.addEventListener("submit", (e) => {
                 nuevoRec.push(data)
                 mostrarRecibos(nuevoRec)
             })
-            
+
     }
     modalCrearRec.hide()
 })
 
-// ACTUALIZAR
-
-// Recibir datos de la interfaz
+//ACTUALIZAR: Elementos del formulario de actualización
 const selectIdResAct = document.getElementById("idResAct")
 const inputValorRecAct = document.getElementById("valorRecAct")
 const inputPeriodoRecAct = document.getElementById("periodoRecAct")
 const inputFechaRecAct = document.getElementById("fechaRecAct")
 const inputEstadoRecAct = document.getElementById("estadoRecAct")
 
-// Prepara proceso editar
+// Escuchador de eventos para el botón de actualizar
 let idActRecibo
-on(document, "click", "#btnActRec", e => {
+onRecibos(document, "click", "#btnActRec", e => {
     const fila = e.target.parentNode.parentNode
     idActRecibo = fila.children[5].innerHTML;
 
@@ -143,8 +144,7 @@ on(document, "click", "#btnActRec", e => {
         .catch(error => console.log(error))
 })
 
-
-
+// Mostrar datos del recibos en el modal de actualización
 const mostrarRec = (data) => {
     selectIdResAct.value = data.idResidente.idResidente;
     inputValorRecAct.value = data.valorAPagar;
@@ -154,10 +154,9 @@ const mostrarRec = (data) => {
     opcionRec = "editarRec";
     modalActRec.show();
     comboReciboAct()
-    console.log((data.idResidente.idResidente))
 }
 
-// Carga idResidente en modal actualizar
+// Cargar opciones del combo de residentes en el modal de actualización
 const comboReciboAct = () => {
     const urlListadoRecibosAct = "http://localhost:8080/api/residentes/todos"
     fetch(urlListadoRecibosAct)
@@ -165,7 +164,6 @@ const comboReciboAct = () => {
         .then(data => cargarIdComboAct(data))
         .catch(error => console.log(error))
 }
-
 const cargarIdComboAct = (arregloId) => {
     const cargarIdCuerpoAct = document.getElementById("idResAct")
     let resultadosIdAct = ""
@@ -174,7 +172,6 @@ const cargarIdComboAct = (arregloId) => {
     });
     cargarIdCuerpoAct.innerHTML = resultadosIdAct
 }
-
 
 // Crear actualizacion de recibo
 cuerpoActRec.addEventListener("submit", (e) => {
@@ -205,14 +202,12 @@ cuerpoActRec.addEventListener("submit", (e) => {
 
 // ELIMINAR
 
-// Prepara proceso, se obtiene id recibo
-on(document, "click", "#btnDelRec", e => {
+//ELIMINAR: Escuchador de eventos se obtiene ID Recibo
+onRecibos(document, "click", "#btnDelRec", e => {
     const fila = e.target.parentNode.parentNode;
     const idRecibo = fila.children[5].innerHTML;
-    const confirmModal = new bootstrap.Modal(document.getElementById('modalDelRec'));
     confirmModal.show();
 
-    const btnConfirmDelete = document.getElementById('ConfirmDel');
     btnConfirmDelete.addEventListener('click', () => {
         eliminarResidente(idRecibo);
         confirmModal.hide();
