@@ -164,7 +164,7 @@ body {
   margin-top: -10px;
 }
 
-.formCont {
+#form {
   display: flex;
   flex-direction: column;
   font-family: Roboto-Regular;
@@ -224,13 +224,13 @@ textarea.msgCont {
   border: none;
 }
 
-.formCont input {
+#form input {
   color: #0e0e0eb5;
   font-family: Roboto-Regular;
   padding: 5px;
 }
 
-.formCont textarea {
+#form textarea {
   color: #0e0e0eb5;
   font-family: Roboto-Regular;
   padding: 5px;
